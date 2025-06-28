@@ -1,0 +1,103 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GWebWorld - Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f8fafc, #e0f2fe);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #3b82f6;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <h1 class="text-3xl font-bold text-blue-700">GWebWorld</h1>
+      <nav class="space-x-6 text-center">
+        <a href="#home" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Home</a>
+        <a href="#about" class="nav-link text-gray-700 hover:text-blue-700 font-medium">About</a>
+        <a href="#contact" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>  <!-- Dashboard -->  <main id="home" class="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <section class="text-center mb-10 px-2">
+      <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800 mb-3">Welcome to <span class="text-blue-600">GWebWorld</span></h2>
+      <p class="text-gray-600 text-base sm:text-lg">A central dashboard for all my creative and development projects.</p>
+    </section><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <a href="https://gquranexplore.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-blue-100">
+    <h3 class="text-xl font-bold text-blue-700 mb-1">📖 G Quran Explore</h3>
+    <p class="text-gray-600 text-sm">Explore the Quran with search & recitation features.</p>
+  </a>
+  <a href="https://gdeveloperscompass.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-green-100">
+    <h3 class="text-xl font-bold text-green-700 mb-1">🧭 G Developers Compass</h3>
+    <p class="text-gray-600 text-sm">Developer guidance and tools in one place.</p>
+  </a>
+  <a href="https://gcodeconverter.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-purple-100">
+    <h3 class="text-xl font-bold text-purple-700 mb-1">🔄 G Code Converter</h3>
+    <p class="text-gray-600 text-sm">Easily convert source code formats and snippets.</p>
+  </a>
+  <a href="https://gutilityhub.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-yellow-100">
+    <h3 class="text-xl font-bold text-yellow-700 mb-1">🛠️ G Utility Hub</h3>
+    <p class="text-gray-600 text-sm">Your multi-purpose digital utility center.</p>
+  </a>
+  <a href="https://ghadithcollection.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-pink-100">
+    <h3 class="text-xl font-bold text-pink-700 mb-1">📜 G Hadith Collection</h3>
+    <p class="text-gray-600 text-sm">Browse and learn authentic Hadiths.</p>
+  </a>
+  <a href="https://gairesumebuilder.pages.dev/#home" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-indigo-100">
+    <h3 class="text-xl font-bold text-indigo-700 mb-1">📄 G AI Resume Builder</h3>
+    <p class="text-gray-600 text-sm">Create smart resumes in seconds.</p>
+  </a>
+  <a href="https://gnyayadarpan.pages.dev" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-red-100">
+    <h3 class="text-xl font-bold text-red-600 mb-1">⚖️ G Nyaya Darpan</h3>
+    <p class="text-gray-600 text-sm">Legal guidance and documents center.</p>
+  </a>
+  <a href="https://indiageographywebsite.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-teal-100">
+    <h3 class="text-xl font-bold text-teal-700 mb-1">🗺️ India Geography</h3>
+    <p class="text-gray-600 text-sm">Interactive map and geography content.</p>
+  </a>
+  <a href="https://texttoimagegenerate-flux-1-dev.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-rose-100">
+    <h3 class="text-xl font-bold text-rose-600 mb-1">🎨 Text to Image AI</h3>
+    <p class="text-gray-600 text-sm">Generate artwork from text prompts.</p>
+  </a>
+  <a href="https://gufaranportfolio.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-gray-300">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">👤 My Portfolio</h3>
+    <p class="text-gray-600 text-sm">My personal journey, skills & achievements.</p>
+  </a>
+</div>
+
+  </main>  <!-- About Section -->  <section id="about" class="bg-white mt-16 py-10 px-4 border-t">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">About GWebWorld</h2>
+      <p class="text-gray-600 text-md">GWebWorld is a professional dashboard created by Gufaran Mujawar. It brings together a wide range of educational tools, AI utilities, developer resources, and personal creations in one simple and beautiful interface.</p>
+    </div>
+  </section>  <!-- Contact Section -->  <section id="contact" class="bg-gray-50 py-10 px-4 border-t">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact</h2>
+      <p class="text-gray-600 mb-2">📧 Email: <a href="mailto:gufaranmujawar786@gmail.com" class="text-blue-600">gufaranmujawar786@gmail.com</a></p>
+      <p class="text-gray-600">📍 Location: Maharashtra, India</p>
+    </div>
+  </section>  <!-- Footer -->  <footer class="bg-white py-6 text-center mt-10 border-t">
+    <p class="text-gray-500 text-sm">© 2025 Gufaran Mujawar - All rights reserved.</p>
+  </footer>
+</body>
+</html>
