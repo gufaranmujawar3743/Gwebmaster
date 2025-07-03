@@ -1,13 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GWebWorld - Dashboard</title>
+  <title>G-WebWorld - Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #f8fafc, #e0f2fe);
     }
     .nav-link {
       position: relative;
@@ -25,79 +25,191 @@
     .nav-link:hover::after {
       width: 100%;
     }
+    /* Dark mode styles */
+    body.dark {
+      background: linear-gradient(to right, #1a202c, #2d3748);
+      color: #e2e8f0;
+    }
+    body.dark .bg-white {
+      background-color: #2d3748;
+      color: #e2e8f0;
+    }
+    body.dark .shadow-md {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    }
+    body.dark .text-gray-700 {
+      color: #cbd5e0;
+    }
+    body.dark .hover\\:text-blue-700:hover {
+      color: #63b3ed;
+    }
+    body.dark .text-gray-800 {
+      color: #e2e8f0;
+    }
+    body.dark .text-gray-600 {
+      color: #a0aec0;
+    }
+    body.dark .border-blue-100,
+    body.dark .border-green-100,
+    body.dark .border-purple-100,
+    body.dark .border-yellow-100,
+    body.dark .border-pink-100,
+    body.dark .border-indigo-100,
+    body.dark .border-red-100,
+    body.dark .border-teal-100,
+    body.dark .border-rose-100,
+    body.dark .border-gray-300 {
+      border-color: #4a5568;
+    }
+    body.dark .text-blue-700 { color: #63b3ed; }
+    body.dark .text-green-700 { color: #68d391; }
+    body.dark .text-purple-700 { color: #b794f4; }
+    body.dark .text-yellow-700 { color: #f6e05e; }
+    body.dark .text-pink-700 { color: #f687b3; }
+    body.dark .text-indigo-700 { color: #7f9cf5; }
+    body.dark .text-red-600 { color: #fc8181; }
+    body.dark .text-teal-700 { color: #5eead4; }
+    body.dark .text-rose-600 { color: #fda4af; }
+    body.dark .text-gray-800 { color: #e2e8f0; }
+    body.dark .border-t {
+      border-color: #4a5568;
+    }
+    body.dark .bg-gray-50 {
+        background-color: #2d3748;
+    }
   </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-blue-50 to-white">
-  <!-- Header -->
-  <header class="bg-white shadow-md sticky top-0 z-50">
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-white transition-colors duration-300">
+  <header class="bg-white shadow-md sticky top-0 z-50 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-      <h1 class="text-3xl font-bold text-blue-700">GWebWorld</h1>
-      <nav class="space-x-6 text-center">
+      <h1 class="text-3xl font-bold text-blue-700">G-Web-World</h1>
+      <nav class="flex items-center space-x-4 sm:space-x-6 text-center">
         <a href="#home" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Home</a>
         <a href="#about" class="nav-link text-gray-700 hover:text-blue-700 font-medium">About</a>
         <a href="#contact" class="nav-link text-gray-700 hover:text-blue-700 font-medium">Contact</a>
+        <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300" aria-label="Toggle dark mode">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
       </nav>
     </div>
-  </header>  <!-- Dashboard -->  <main id="home" class="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+  </header>
+
+  <main id="home" class="py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
     <section class="text-center mb-10 px-2">
       <h2 class="text-3xl sm:text-4xl font-semibold text-gray-800 mb-3">Welcome to <span class="text-blue-600">GWebWorld</span></h2>
       <p class="text-gray-600 text-base sm:text-lg">A central dashboard for all my creative and development projects.</p>
-    </section><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  <a href="https://gquranexplore.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-blue-100">
-    <h3 class="text-xl font-bold text-blue-700 mb-1">📖 G Quran Explore</h3>
-    <p class="text-gray-600 text-sm">Explore the Quran with search & recitation features.</p>
-  </a>
-  <a href="https://gdeveloperscompass.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-green-100">
-    <h3 class="text-xl font-bold text-green-700 mb-1">🧭 G Developers Compass</h3>
-    <p class="text-gray-600 text-sm">Developer guidance and tools in one place.</p>
-  </a>
-  <a href="https://gcodeconverter.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-purple-100">
-    <h3 class="text-xl font-bold text-purple-700 mb-1">🔄 G Code Converter</h3>
-    <p class="text-gray-600 text-sm">Easily convert source code formats and snippets.</p>
-  </a>
-  <a href="https://gutilityhub.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-yellow-100">
-    <h3 class="text-xl font-bold text-yellow-700 mb-1">🛠️ G Utility Hub</h3>
-    <p class="text-gray-600 text-sm">Your multi-purpose digital utility center.</p>
-  </a>
-  <a href="https://ghadithcollection.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-pink-100">
-    <h3 class="text-xl font-bold text-pink-700 mb-1">📜 G Hadith Collection</h3>
-    <p class="text-gray-600 text-sm">Browse and learn authentic Hadiths.</p>
-  </a>
-  <a href="https://gairesumebuilder.pages.dev/#home" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-indigo-100">
-    <h3 class="text-xl font-bold text-indigo-700 mb-1">📄 G AI Resume Builder</h3>
-    <p class="text-gray-600 text-sm">Create smart resumes in seconds.</p>
-  </a>
-  <a href="https://gnyayadarpan.pages.dev" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-red-100">
-    <h3 class="text-xl font-bold text-red-600 mb-1">⚖️ G Nyaya Darpan</h3>
-    <p class="text-gray-600 text-sm">Legal guidance and documents center.</p>
-  </a>
-  <a href="https://indiageographywebsite.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-teal-100">
-    <h3 class="text-xl font-bold text-teal-700 mb-1">🗺️ India Geography</h3>
-    <p class="text-gray-600 text-sm">Interactive map and geography content.</p>
-  </a>
-  <a href="https://texttoimagegenerate-flux-1-dev.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-rose-100">
-    <h3 class="text-xl font-bold text-rose-600 mb-1">🎨 Text to Image AI</h3>
-    <p class="text-gray-600 text-sm">Generate artwork from text prompts.</p>
-  </a>
-  <a href="https://gufaranportfolio.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-gray-300">
-    <h3 class="text-xl font-bold text-gray-800 mb-1">👤 My Portfolio</h3>
-    <p class="text-gray-600 text-sm">My personal journey, skills & achievements.</p>
-  </a>
-</div>
+    </section>
 
-  </main>  <!-- About Section -->  <section id="about" class="bg-white mt-16 py-10 px-4 border-t">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="https://gquranexplore.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-blue-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-blue-700 mb-1">📖 G Quran Explore</h3>
+        <p class="text-gray-600 text-sm">Explore the Quran with search & recitation features.</p>
+      </a>
+      <a href="https://gdeveloperscompass.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-green-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-green-700 mb-1">🧭 G Developers Compass</h3>
+        <p class="text-gray-600 text-sm">Developer guidance and tools in one place.</p>
+      </a>
+      <a href="https://gcodeconverter.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-purple-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-purple-700 mb-1">🔄 G Code Converter</h3>
+        <p class="text-gray-600 text-sm">Easily convert source code formats and snippets.</p>
+      </a>
+      <a href="https://gutilityhub.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-yellow-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-yellow-700 mb-1">🛠️ G Utility Hub</h3>
+        <p class="text-gray-600 text-sm">Your multi-purpose digital utility center.</p>
+      </a>
+      <a href="https://ghadithcollection.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-pink-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-pink-700 mb-1">📜 G Hadith Collection</h3>
+        <p class="text-gray-600 text-sm">Browse and learn authentic Hadiths.</p>
+      </a>
+      <a href="https://gairesumebuilder.pages.dev/#home" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-indigo-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-indigo-700 mb-1">📄 G AI Resume Builder</h3>
+        <p class="text-gray-600 text-sm">Create smart resumes in seconds.</p>
+      </a>
+      <a href="https://gnyayadarpan.pages.dev" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-red-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-red-600 mb-1">⚖️ G Nyaya Darpan</h3>
+        <p class="text-gray-600 text-sm">Legal guidance and documents center.</p>
+      </a>
+      <a href="https://indiageographywebsite.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-teal-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-teal-700 mb-1">🗺️ India Geography</h3>
+        <p class="text-gray-600 text-sm">Interactive map and geography content.</p>
+      </a>
+      <a href="https://texttoimagegenerate-flux-1-dev.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-rose-100 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-rose-600 mb-1">🎨 Text to Image AI</h3>
+        <p class="text-gray-600 text-sm">Generate artwork from text prompts.</p>
+      </a>
+      <a href="https://gufaranportfolio.pages.dev/" class="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition border border-gray-300 dark:bg-gray-800 dark:border-gray-700">
+        <h3 class="text-xl font-bold text-gray-800 mb-1">👤 My Portfolio</h3>
+        <p class="text-gray-600 text-sm">My personal journey, skills & achievements.</p>
+      </a>
+    </div>
+  </main>
+
+  <section id="about" class="bg-white mt-16 py-10 px-4 border-t dark:bg-gray-900 dark:border-gray-700 transition-colors duration-300">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-2xl font-bold text-gray-800 mb-4">About GWebWorld</h2>
       <p class="text-gray-600 text-md">GWebWorld is a professional dashboard created by Gufaran Mujawar. It brings together a wide range of educational tools, AI utilities, developer resources, and personal creations in one simple and beautiful interface.</p>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" class="bg-gray-50 py-10 px-4 border-t">
+  </section>
+
+  <section id="contact" class="bg-gray-50 py-10 px-4 border-t dark:bg-gray-800 dark:border-gray-700 transition-colors duration-300">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact</h2>
-      <p class="text-gray-600 mb-2">📧 Email: <a href="mailto:gufaranmujawar786@gmail.com" class="text-blue-600">gufaranmujawar786@gmail.com</a></p>
+      <p class="text-gray-600 mb-2">📧 Email: <a href="mailto:gufaranmujawar786@gmail.com" class="text-blue-600 hover:underline">gufaranmujawar786@gmail.com</a></p>
       <p class="text-gray-600">📍 Location: Maharashtra, India</p>
+      <div class="mt-6 flex justify-center space-x-6">
+        <a href="#" class="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400" aria-label="LinkedIn">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.338 16.338C19.782 12.894 19.782 7.106 16.338 3.662C12.894 0.218 7.106 0.218 3.662 3.662C0.218 7.106 0.218 12.894 3.662 16.338C7.106 19.782 12.894 19.782 16.338 16.338ZM11.496 11.496L10.5 10.5L9.504 11.496L10.5 12.492L11.496 11.496Z" clip-rule="evenodd" />
+            <path d="M18.337 16.892a.75.75 0 00-1.06 0l-4.5-4.5a.75.75 0 00-1.06 0l-4.5 4.5a.75.75 0 001.06 1.06l4.5-4.5 4.5 4.5a.75.75 0 001.06-1.06Z" />
+            <path fill-rule="evenodd" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0ZM7.5 10.5a.75.75 0 00-1.5 0v3a.75.75 0 001.5 0v-3ZM10.5 10.5a.75.75 0 00-1.5 0v3a.75.75 0 001.5 0v-3ZM13.5 10.5a.75.75 0 00-1.5 0v3a.75.75 0 001.5 0v-3ZM16.5 10.5a.75.75 0 00-1.5 0v3a.75.75 0 001.5 0v-3Z" clip-rule="evenodd" />
+             <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm-2.25 14.25a.75.75 0 01-1.5 0v-6a.75.75 0 011.5 0v6Zm4.5 0a.75.75 0 01-1.5 0v-6a.75.75 0 011.5 0v6Zm3.75-6.75a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75ZM18.75 12a.75.75 0 01-1.5 0v.75a.75.75 0 011.5 0V12Z" />
+          </svg>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400" aria-label="GitHub">
+          <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.165 6.839 9.488.5.09.682-.217.682-.483 0-.237-.008-.867-.013-1.7C4.606 18.067 4 16.92 4 16.92c-.49-.124-.95-.333-.07-.346.74-.012 1.13.681 1.13.681.66 1.13 1.734.805 2.155.617.067-.48.258-.805.47-1c-1.643-.186-3.364-.82-3.364-3.65 0-.809.288-1.47.765-1.993-.076-.186-.332-.942.071-1.962 0 0 .626-.2 2.04.767a7.127 7.127 0 013.756 0c1.414-.967 2.04-.767 2.04-.767.404 1.02.148 1.776.072 1.962.477.523.764 1.184.764 1.993 0 2.836-1.72 3.464-3.364 3.65.26.224.5.67.5 1.35 0 .97-.008 1.757-.013 2.007 0 .267.182.573.687.476C19.135 20.165 22 16.419 22 12c0-5.523-4.477-10-10-10Z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
     </div>
-  </section>  <!-- Footer -->  <footer class="bg-white py-6 text-center mt-10 border-t">
-    <p class="text-gray-500 text-sm">© 2025 Gufaran Mujawar - All rights reserved.</p>
+  </section>
+
+  <footer class="bg-white py-6 text-center mt-10 border-t dark:bg-gray-900 dark:border-gray-700 transition-colors duration-300">
+    <p class="text-gray-500 text-sm dark:text-gray-400">© 2025 Gufaran Mujawar - All rights reserved.</p>
   </footer>
+
+  <script>
+    // Dark Mode Toggle Logic
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Check for user's preferred theme in localStorage or system preference
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark' || (!currentTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      body.classList.add('dark');
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      if (body.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Optional: Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+  </script>
 </body>
 </html>
